@@ -23,5 +23,6 @@ async fn main() {
             y += 5;
         }
         draw_rectangle(x,y,paddle_wid,paddle_hei,WHITE);
+        next_frame().await;
     }
 }
