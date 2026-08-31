@@ -12,8 +12,8 @@ fn window_conf() -> Conf {
 async fn main() {
     let mut x = 10.0;
     let mut y = 240.0;
-    let paddle_x = 20.0;
-    let paddle_y = 60.0;
+    let paddle_wid = 20.0;
+    let paddle_hei = 60.0;
     loop {
         clear_background(BLACK);
         if is_key_down(KeyCode::W) {
@@ -22,6 +22,6 @@ async fn main() {
         if is_key_down(KeyCode::S) {
             y += 5;
         }
-        draw_rectangle(x,y,paddle_x,paddle_y);
+        draw_rectangle(x,y,paddle_wid,paddle_hei,WHITE);
     }
 }
