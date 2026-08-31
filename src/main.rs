@@ -37,8 +37,8 @@ async fn main() {
             ball_speed_y = -ball_speed_y;
         }
         draw_rectangle(x,y,paddle_wid,paddle_hei,WHITE);
-        x += ball_speed_x;
-        y += ball_speed_y;
+        ball_x += ball_speed_x;
+        ball_y += ball_speed_y;
         draw_circle(ball_x, ball_y, ball_radius, WHITE);
         next_frame().await;
     }
