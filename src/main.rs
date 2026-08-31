@@ -10,9 +10,9 @@ fn window_conf() -> Conf {
 #[macroquad::main("Pong")]
 async fn main() {
     let mut x = 10.0;
-    let mut y = 240.0;
+    let mut y = 200.0;
     let paddle_wid = 20.0;
-    let paddle_hei = 60.0;
+    let paddle_hei = 100.0;
     loop {
         clear_background(BLACK);
 
