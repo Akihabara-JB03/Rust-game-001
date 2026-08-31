@@ -16,8 +16,8 @@ async fn main() {
     let ball_radius = 5.0;
     let mut ball_x = 400.0 - (ball_radius * 2.0);
     let mut ball_y = 300.0 - (ball_radius * 2.0);
-    let ball_speed_x = 5.0;
-    let ball_speed_y = 5.0;
+    let mut ball_speed_x = 5.0;
+    let mut ball_speed_y = 5.0;
     
     loop {
         clear_background(BLACK);
