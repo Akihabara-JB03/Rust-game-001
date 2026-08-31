@@ -1,4 +1,3 @@
-use rand::Rng;
 use macroquad::prelude::*;
 
 fn window_conf() -> Conf {
@@ -18,16 +17,16 @@ async fn main() {
         clear_background(BLACK);
 
         if is_key_down(KeyCode::W) {
-            y -= 5;
+            y -= 5.0;
         }
         if is_key_down(KeyCode::S) {
-            y += 5;
+            y += 5.0;
         }
-        if y <= 0 {
-            y = 0;
+        if y <= 0.0 {
+            y = 0.0;
         }
-        if y >= (600 - paddle_hei) {
-            y = (600 - paddle_hei);
+        if y >= (600.0 - paddle_hei) {
+            y = (600.0 - paddle_hei);
         }
         draw_rectangle(x,y,paddle_wid,paddle_hei,WHITE);
         next_frame().await;
