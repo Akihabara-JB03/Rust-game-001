@@ -13,6 +13,12 @@ async fn main() {
     let mut y = 200.0;
     let paddle_wid = 20.0;
     let paddle_hei = 100.0;
+    let ball_radius = 5.0;
+    let mut ball_x = 400.0 - (ball_radius * 2.0);
+    let mut ball_y = 300.0 - (ball_radius * 2.0);
+    let ball_speed_x = 5.0;
+    let ball_speed_y = 5.0;
+    
     loop {
         clear_background(BLACK);
 
@@ -29,6 +35,7 @@ async fn main() {
             y = (600.0 - paddle_hei);
         }
         draw_rectangle(x,y,paddle_wid,paddle_hei,WHITE);
+        draw_circle(ball_x, ball_y, ball_radius, WHITE);
         next_frame().await;
     }
 }
