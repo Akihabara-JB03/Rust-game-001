@@ -30,11 +30,11 @@ async fn main() {
         }
         if y <= 0.0 {
             y = 0.0;
-            ball_speed = -ball_speed_y;
+            ball_speed_y = -ball_speed_y;
         }
-        if y >= (600.0 - paddle_hei) {
-            y = (600.0 - paddle_hei);
-            ball_speed = -ball_speed_y;
+        if y >= 600.0 - paddle_hei {
+            y = 600.0 - paddle_hei;
+            ball_speed_y = -ball_speed_y;
         }
         draw_rectangle(x,y,paddle_wid,paddle_hei,WHITE);
         x += ball_speed_x;
