@@ -31,10 +31,10 @@ async fn main() {
             y += 5.0;
         }
         if is_key_down(KeyCode::Up) {
-            y -= 5.0;
+            y_2 -= 5.0;
         }
         if is_key_down(KeyCode::Down) {
-            y += 5.0;
+            y_2 += 5.0;
         }
         if y <= 0.0 {
             y = 0.0;
@@ -42,8 +42,24 @@ async fn main() {
         if y >= 600.0 - paddle_hei {
             y = 600.0 - paddle_hei;
         }
+        if y_2 <= 0.0 {
+            y_2 = 0.0;
+        }
+        if y_2 >= 600.0 - paddle_hei {
+            y_2 = 600.0 - paddle_hei;
+        }
         if (ball_y <= 0.0 || ball_y >= 600.0 - ball_radius) {
             ball_speed_y = -ball_speed_y;
+        }
+        if ball_y <= y+paddle_hei && ball_y >= y {
+            if ball_x <= x + 30 {
+                ball_speed_x = ball_speed_x;
+            }
+        }
+        if ball_y <= y_2+paddle_hei && ball_y >= y_2 {
+            if ball_x <= x_2 + 30 {
+                ball_speed_x = ball_speed_x;
+            }
         }
         draw_rectangle(x,y,paddle_wid,paddle_hei,WHITE);
         draw_rectangle(x_2,y_2,paddle_wid,paddle_hei,WHITE);
