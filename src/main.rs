@@ -58,7 +58,7 @@ async fn main() {
         }
         if ball_y <= y_2+paddle_hei && ball_y >= y_2 {
             if ball_x <= x_2 + 30 {
-                ball_speed_x = ball_speed_x;
+                ball_speed_x = -ball_speed_x;
             }
         }
         draw_rectangle(x,y,paddle_wid,paddle_hei,WHITE);
