@@ -11,7 +11,7 @@ fn window_conf() -> Conf {
 async fn main() {
     let mut x = 10.0;
     let mut y = 200.0;
-    let mut x_2 = 790.0;
+    let mut x_2 = (800 - 40);
     let mut y_2 = 200.0;
     let paddle_wid = 20.0;
     let paddle_hei = 100.0;
