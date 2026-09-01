@@ -11,6 +11,8 @@ fn window_conf() -> Conf {
 async fn main() {
     let mut x = 10.0;
     let mut y = 200.0;
+    let mut x_2 = 790.0;
+    let mut y_2 = 200.0;
     let paddle_wid = 20.0;
     let paddle_hei = 100.0;
     let ball_radius = 5.0;
@@ -28,6 +30,12 @@ async fn main() {
         if is_key_down(KeyCode::S) {
             y += 5.0;
         }
+        if is_key_down(KeyCode::Up) {
+            y -= 5.0;
+        }
+        if is_key_down(KeyCode::Down) {
+            y += 5.0;
+        }
         if y <= 0.0 {
             y = 0.0;
         }
@@ -38,6 +46,7 @@ async fn main() {
             ball_speed_y = -ball_speed_y;
         }
         draw_rectangle(x,y,paddle_wid,paddle_hei,WHITE);
+        draw_rectangle(x_2,y_2,paddle_wid,paddle_hei,WHITE);
         ball_x += ball_speed_x;
         ball_y += ball_speed_y;
         draw_circle(ball_x, ball_y, ball_radius, WHITE);
