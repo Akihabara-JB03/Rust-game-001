@@ -52,12 +52,12 @@ async fn main() {
             ball_speed_y = -ball_speed_y;
         }
         if ball_y <= y+paddle_hei && ball_y >= y {
-            if ball_x <= x + 30 {
+            if ball_x <= x + 30.0 {
                 ball_speed_x = ball_speed_x;
             }
         }
         if ball_y <= y_2+paddle_hei && ball_y >= y_2 {
-            if ball_x <= x_2 + 30 {
+            if ball_x <= x_2 + 30.0 {
                 ball_speed_x = -ball_speed_x;
             }
         }
