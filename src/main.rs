@@ -9,10 +9,10 @@ fn window_conf() -> Conf {
 }
 #[macroquad::main("Pong")]
 async fn main() {
-    let mut x = 10.0;
-    let mut y = 200.0;
+    let mut x = (800.0 - 40.0);
+    let mut y = ((600.0 - 300.0) - 100.0);
     let mut x_2 = (800.0 - 40.0);
-    let mut y_2 = 200.0;
+    let mut y_2 = ((600.0 - 300.0) - 100.0);
     let paddle_wid = 20.0;
     let paddle_hei = 100.0;
     let ball_radius = 5.0;
