@@ -11,7 +11,7 @@ fn window_conf() -> Conf {
 async fn main() {
     let mut x = 10.0;
     let mut y = 200.0;
-    let mut x_2 = (800 - 40);
+    let mut x_2 = (800.0 - 40.0);
     let mut y_2 = 200.0;
     let paddle_wid = 20.0;
     let paddle_hei = 100.0;
@@ -48,7 +48,7 @@ async fn main() {
         if y_2 >= 600.0 - paddle_hei {
             y_2 = 600.0 - paddle_hei;
         }
-        if (ball_y <= 0.0 || ball_y >= 600.0 - ball_radius) {
+        if ball_y <= 0.0 || ball_y >= 600.0 - ball_radius {
             ball_speed_y = -ball_speed_y;
         }
         if ball_y <= y+paddle_hei && ball_y >= y {
