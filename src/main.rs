@@ -1,5 +1,5 @@
+#![windows_subsystem = "windows"]
 use macroquad::prelude::*;
-
 fn window_conf() -> Conf {
     Conf {
         window_width: 800,
